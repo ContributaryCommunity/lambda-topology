@@ -10,10 +10,10 @@
     "lint": "eslint src/*.js",
     "ingest": "node src/index.js"
   },
-  "devDependencies": {
-    "eslint": "^5.8.0"
-  },
   "dependencies": {
     "aws-sdk": "^2.346.0"
+  },
+  "devDependencies": {
+    "eslint": "^5.8.0"
   }
 }
