@@ -92,9 +92,8 @@ function ingestTopology() {
 }
 
 function run() {
+
   ingestTopology()
     .then(handleIngestionResponse);
-  // fetch(topologyUrl)
-  //   .then(res => res.text())
-  //   .then(ingestTopology);
+
 }
