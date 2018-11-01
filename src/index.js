@@ -28,7 +28,7 @@ function uploadToS3(data) {
   s3.createBucket({ Bucket: s3Config.bucket }, function(err) {
 
     if (err) {
-      handleError(err);
+      console.error(err); // eslint-disable-line no-console
     } else {
       const params = {
         Bucket: s3Config.bucket,
