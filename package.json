@@ -11,8 +11,7 @@
     "ingest": "node src/index.js"
   },
   "devDependencies": {
-    "eslint": "^5.8.0",
-    "node-fetch": "^2.2.0"
+    "eslint": "^5.8.0"
   },
   "dependencies": {
     "aws-sdk": "^2.346.0"
