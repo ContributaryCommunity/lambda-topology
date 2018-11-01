@@ -16,22 +16,14 @@ jobs:
           # fallback to using the latest cache if no exact match is found
           - v1-dependencies-
 
-      # - run:
-      #     name: Install Project Dependencies
-      #     command: yarn install
+      - run:
+          name: Install Project Dependencies
+          command: yarn install
 
-      # - run:
-      #     name: Run Linter
-      #     command: yarn lint
+      - run:
+          name: Run Linter
+          command: yarn lint
       
-      # - run:
-      #     name: Setup Credentials File
-      #     command: touch ./src/credentials.js
-
-      # - run:
-      #     name: Run Unit Tests
-      #     command: export NODE_ENV=production && yarn test
-
-      # - run:
-      #     name: Execute The Build
-      #     command: yarn build
+      - run:
+          name: Run Ingest Script
+          command: mkdir tmp && yarn ingest
