@@ -5,6 +5,7 @@ const AWS = require('aws-sdk');
 const path = require('path');
 const fs = require('fs');
 const isProduction = process.env.NODE_ENV === 'production';
+const isCI = process.env.NODE_ENV === 'ci';
 const tmpDir = path.join(__dirname, '..', 'tmp');
 const outputFile = 'topology.json';
 const s3Config = {
@@ -48,19 +49,23 @@ function getTopology() {
       Bucket: s3Config.bucket,
       Key: `${s3Config.key}/${s3Config.object}`
     }, (err, data) => {
-      const parseedData = JSON.parse(data.Body.toString());
-
+      const parsedData = JSON.parse(data.Body.toString());
+      
       if (err) {
         console.log(err); // eslint-disable-line
         reject();
       } else {
-        resolve(parseedData);
+        resolve(parsedData);
       }
     });
   });
 }
 
 function run() {
+
+  if (isCI) {
+    return {};
+  }
 
   return getTopology()
     .then(handleGetTopologyResponse)

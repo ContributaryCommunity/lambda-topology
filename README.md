@@ -23,6 +23,8 @@ For contributing to this project and testing the output locally, you will need
 - `yarn ingest` - Run _src/ingeest.js_ and by default output the file in _tmp/_
 - `yarn read` - Run _src/read.js_ and by default output the file in _tmp/_
 
+> With the appropriate AWS credentials exported locally, testing against the live endpoints can be done by running `export NODE_ENV=production` before the relevant task.
+
 ## Release Procedure
 1. Merge all changes into master
 1. Bump _package.json_, `git tag` and push everything to master
