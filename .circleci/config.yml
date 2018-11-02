@@ -27,3 +27,7 @@ jobs:
       - run:
           name: Run Ingest Script
           command: mkdir tmp && yarn ingest
+
+      - run:
+          name: Run Read Script
+          command: rm -rf tmp/* && yarn read

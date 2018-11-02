@@ -9,7 +9,9 @@
 Lambda for topology ingestion of the topology in GitHub to the [Contributary website](https://lambda-topology-ingest).  The Lambda is run on a cron to update topology once a day.
 
 ## Workflow
-Changes submitted to _src/index.js_ are uploaded manually to the Lambda function console.
+Changes submitted to _src/*.js_ are uploaded manually to the AWS Lambda function console.  Currently there are two Lambdas used
+- _ingest_ - Copies _data/topology.json_ from GitHub once a day and copies it into an S3 bucket
+- _read_ - Responds to _api/topology_ requests in API Gateway with the contents of the topology file in S3
 
 ## Development
 For contributing to this project and testing the output locally, you will need
@@ -18,7 +20,8 @@ For contributing to this project and testing the output locally, you will need
 1. Create _tmp/_ directory in the root of the project
 
 - `yarn lint` - Validatse all JS and JSON passes linting
-- `yarn ingest` - Run _src/index.js_ and by default output the file in _tmp/_
+- `yarn ingest` - Run _src/ingeest.js_ and by default output the file in _tmp/_
+- `yarn read` - Run _src/read.js_ and by default output the file in _tmp/_
 
 ## Release Procedure
 1. Merge all changes into master
