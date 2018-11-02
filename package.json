@@ -1,5 +1,5 @@
 {
-  "name": "lambda-topology-ingest",
+  "name": "lambda-topology",
   "version": "0.1.0",
   "description": "Lambda for topology ingestion from GitHub on a cron",
   "repository": "git@github.com:ContributaryCommunity/lambda-topology-ingest.git",

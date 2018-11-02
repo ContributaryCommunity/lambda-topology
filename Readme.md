@@ -1,4 +1,4 @@
-# lambda-topology-ingest
+# lambda-topology
 [![GitHub release](https://img.shields.io/github/tag/ContributaryCommunity/lambda-topology-ingest.svg)](https://github.com/ContributaryCommunity/lambda-topology-ingest/tags)
 ![CircleCI branch](https://img.shields.io/circleci/project/github/ContributaryCommunity/lambda-topology-ingest/master.svg?style=plastic)
 [![GitHub issues](https://img.shields.io/github/issues-raw/ContributaryCommunity/lambda-topology-ingest.svg)](https://github.com/ContributaryCommunity/lambda-topology-ingest/issues)
