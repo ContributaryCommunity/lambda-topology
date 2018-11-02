@@ -2,7 +2,7 @@
   "name": "lambda-topology",
   "version": "0.1.0",
   "description": "Lambda for topology ingestion from GitHub on a cron",
-  "repository": "git@github.com:ContributaryCommunity/lambda-topology-ingest.git",
+  "repository": "git@github.com:ContributaryCommunity/lambda-topology.git",
   "author": "Owen Buckley <owen@thegreenhouse.io>",
   "license": "MIT",
   "scripts": {
