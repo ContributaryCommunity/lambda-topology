@@ -1,7 +1,6 @@
 /*
  * This script assumes permissions (AWS_ACCESS_KEY_ID / AWS_SECRET_ACCESS_KEY) as environment variables or an IAM role
  */
-// const https = require('https');
 const AWS = require('aws-sdk');
 const path = require('path');
 const fs = require('fs');
@@ -20,33 +19,6 @@ exports.run = run;
 if (!isProduction) {
   run();
 }
-
-// function uploadToS3(data) {
-//   const s3 = new AWS.S3();
-//   const key = `${s3Config.key}/${outputFile}`;
-
-//   s3.createBucket({ Bucket: s3Config.bucket }, function(err) {
-
-//     if (err) {
-//       console.error(err); // eslint-disable-line no-console
-//     } else {
-//       const params = {
-//         Bucket: s3Config.bucket,
-//         Key: key,
-//         Body: JSON.stringify(data, null, 2),
-//         ACL: 'public-read'
-//       };
-
-//       s3.putObject(params, function(err) {
-//         if (err) {
-//           console.error(err); // eslint-disable-line no-console
-//         } else {
-//           console.log(`Successfully uploaded data to ${s3Config.bucket}/${key}`); // eslint-disable-line no-console
-//         }
-//       });
-//     }
-//   });
-// } 
 
 function writeToFilesystem(response) {
   const filePath = `${tmpDir}/${outputFile}`;
