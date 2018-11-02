@@ -51,10 +51,10 @@ function getTopology() {
       Bucket: s3Config.bucket,
       Key: `${s3Config.key}/${s3Config.object}`
     }, (err, data) => {
-      const parsedData = JSON.parse(data.Body.toString());
+      const parsedData = data ? JSON.parse(data.Body.toString()) : null;
       
-      if (err) {
-        console.log(err); // eslint-disable-line
+      if (err || !parsedData) {
+        console.error(err, parsedData); // eslint-disable-line
         reject();
       } else {
         resolve(parsedData);

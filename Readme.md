@@ -1,12 +1,12 @@
-# lambda-topology-ingest
-[![GitHub release](https://img.shields.io/github/tag/ContributaryCommunity/lambda-topology-ingest.svg)](https://github.com/ContributaryCommunity/lambda-topology-ingest/tags)
-![CircleCI branch](https://img.shields.io/circleci/project/github/ContributaryCommunity/lambda-topology-ingest/master.svg?style=plastic)
-[![GitHub issues](https://img.shields.io/github/issues-raw/ContributaryCommunity/lambda-topology-ingest.svg)](https://github.com/ContributaryCommunity/lambda-topology-ingest/issues)
-[![GitHub issues](https://img.shields.io/github/issues-pr-raw/ContributaryCommunity/lambda-topology-ingest.svg)](https://github.com/ContributaryCommunity/lambda-topology-ingest/issues)
-[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/ContributaryCommunity/lambda-topology-ingest/master/LICENSE.md)
+# lambda-topology
+[![GitHub release](https://img.shields.io/github/tag/ContributaryCommunity/lambda-topology.svg)](https://github.com/ContributaryCommunity/lambda-topology/tags)
+![CircleCI branch](https://img.shields.io/circleci/project/github/ContributaryCommunity/lambda-topology/master.svg?style=plastic)
+[![GitHub issues](https://img.shields.io/github/issues-raw/ContributaryCommunity/lambda-topology.svg)](https://github.com/ContributaryCommunity/lambda-topology/issues)
+[![GitHub issues](https://img.shields.io/github/issues-pr-raw/ContributaryCommunity/lambda-topology.svg)](https://github.com/ContributaryCommunity/lambda-topology/issues)
+[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/ContributaryCommunity/lambda-topology/master/LICENSE.md)
 
 ## Overview
-Lambda for topology ingestion of the topology in GitHub to the [Contributary website](https://lambda-topology-ingest).  The Lambda is run on a cron to update topology once a day.
+Lambda for topology ingestion of the topology in GitHub to the [Contributary website](https://lambda-topology).  The Lambda is run on a cron to update topology once a day.
 
 ## Workflow
 Changes submitted to _src/*.js_ are uploaded manually to the AWS Lambda function console.  Currently there are two Lambdas used
@@ -30,4 +30,4 @@ For contributing to this project and testing the output locally, you will need
 1. Merge all changes into master
 1. Bump _package.json_, `git tag` and push everything to master
 1. Upload the contents of _src/index.js_ to Lambda
-1. Create [Release Notes](https://github.com/ContributaryCommunity/lambda-topology-ingest/releases) in GitHub
+1. Create [Release Notes](https://github.com/ContributaryCommunity/lambda-topology/releases) in GitHub
