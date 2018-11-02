@@ -36,6 +36,8 @@ function writeToFilesystem(response) {
 function handleGetTopologyResponse(response) {
   if (isProduction) {
     return response;
+  } else if (isCI) {
+    return {};
   } else {
     writeToFilesystem(response);
   }
@@ -62,10 +64,6 @@ function getTopology() {
 }
 
 function run() {
-
-  if (isCI) {
-    return {};
-  }
 
   return getTopology()
     .then(handleGetTopologyResponse)

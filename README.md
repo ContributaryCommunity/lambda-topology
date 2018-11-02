@@ -18,6 +18,7 @@ For contributing to this project and testing the output locally, you will need
 1. [NodeJS](https://nodejs.org/) 8.x
 1. [Yarn](https://yarnpkg.com) 1.x
 1. Create _tmp/_ directory in the root of the project
+1. Set envrionment variable for devleopment: `export NODE_ENV=development`
 
 - `yarn lint` - Validatse all JS and JSON passes linting
 - `yarn ingest` - Run _src/ingeest.js_ and by default output the file in _tmp/_
