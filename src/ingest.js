@@ -1,5 +1,5 @@
 /*
- * This script assumes AWS_ACCESS_KEY_ID and AWS_SECRET_ACCESS_KEY are exported as environment variables
+ * This script assumes permissions (AWS_ACCESS_KEY_ID / AWS_SECRET_ACCESS_KEY) as environment variables or an IAM role
  */
 const https = require('https');
 const path = require('path');

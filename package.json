@@ -2,13 +2,13 @@
   "name": "lambda-topology-ingest",
   "version": "0.1.0",
   "description": "Lambda for topology ingestion from GitHub on a cron",
-  "main": "src/index.js",
   "repository": "git@github.com:ContributaryCommunity/lambda-topology-ingest.git",
   "author": "Owen Buckley <owen@thegreenhouse.io>",
   "license": "MIT",
   "scripts": {
     "lint": "eslint src/*.js",
-    "ingest": "node src/index.js"
+    "ingest": "node src/ingest.js",
+    "read": "node src/read.js"
   },
   "dependencies": {
     "aws-sdk": "^2.346.0"
